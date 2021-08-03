@@ -40,10 +40,15 @@ res.render("list",{listitle : "worklist",
 
 app.post("/",function(req, res){
  let item = req.body.input;
- console.log(item);
- additem.push(item);
 
- res.redirect("/");
+ if (req.body.list === "work") {
+   workitems.push(item);
+    res.redirect("/work");
+ }else{
+   additem.push(item);
+   res.redirect("/");
+ }
+
 });
 
 app.post("/work",function(req,res){
