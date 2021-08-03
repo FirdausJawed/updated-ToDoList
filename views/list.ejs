@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+ <div id="heading">
+  <h1 ><%= listitle %></h1>
+ </div>
+
+<div class="box">
+    <% for(var i = 0; i<product.length; i++) { %>
+    <div class="item">
+        <input type="checkbox">
+        <p><%= product[i] %></p>
+    </div>
+      <% } %>
+
+      <form  action="/" method="post">
+
+        <input type="text" name="input" placeholder="enter the task!" autocomplete="off">
+        <button type="submit" name="submit">+</button>
+      </form>
+
+</div>
+  </body>
+</html>
