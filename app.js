@@ -30,7 +30,7 @@ app.get("/",function(req, res){
 app.post("/",function(req, res){
  let task = req.body.newitem;
 
- if (req.body.list === "work") {
+ if (req.body.list === "worklist") {
    workitems.push(task);
     res.redirect("/work");
  }else{
@@ -43,6 +43,10 @@ app.get("/work",function(req, res){
 
 res.render("list",{listitle : "worklist",
   newlistitems : workitems})
+});
+
+app.get("/about",function(req, res){
+res.render("about");
 });
 
 app.listen(3000,function(){

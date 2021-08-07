@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>TO DO LIST</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+<%- include ("header") -%>
+
+
  <div id="heading">
   <h1 ><%= listitle %></h1>
  </div>
@@ -18,13 +13,10 @@
     </div>
       <% } %>
 
-      <form  action="/" method="post">
+      <form action="/" method="post">
         <input type="text" name="newitem" placeholder="enter the task!" autocomplete="off">
         <button type="submit" name="list" value="<%= listitle %>">+</button>
       </form>
 
 </div>
-  </body>
-
-  <footer>Created by <i>FIRDAUS JAWED</i> </footer>
-</html>
+<%- include ("footer") -%>
